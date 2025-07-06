@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc 
+*.pyo
+*.pyd
+
+data/*.xlsx
+
+#configs e ambientes locais
+.env
+.vscode/
+.git
+.gitignore
+*.log
+README.md
