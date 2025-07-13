@@ -6,7 +6,6 @@ __pycache__/
 data/*.xlsx
 
 #configs e ambientes locais
-.env
 .vscode/
 .git
 .gitignore

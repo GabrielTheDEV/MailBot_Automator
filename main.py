@@ -1,5 +1,12 @@
 
+from utils.send_email import send_email
 
-print(text)
-# with open('data/p.xlsx', 'rb') as file:
-#     print(file)
+send_email(
+    to='gabrielk1209@gmail.com',
+    subject='Mensagem de teste do Mailman',
+    body=(
+    '<h1>Eai Gabriel</h1>'
+    '<p>Hello World</p>'
+    )
+        
+)
