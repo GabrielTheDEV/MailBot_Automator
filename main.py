@@ -1,5 +1,5 @@
 
-from utils.send_email import send_email
+from src.utils.send_email import send_email
 
 send_email(
     to='gabrielk1209@gmail.com',

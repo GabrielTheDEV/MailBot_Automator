@@ -1,8 +1,9 @@
+.env
 __pycache__/
 *.py[cod]
 *.pyo
 
-.env
+
 
 data/planil.xlsx
 *.log
