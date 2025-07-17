@@ -1,2 +1,4 @@
 docker build -t mailman:0.1 .
 docker run --rm -v "$PWD/data":/app/data mailman:0.1
+
+ docker run -it -v $(pwd):/app -w /app mailman:0.1 bash
