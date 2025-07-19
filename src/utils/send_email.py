@@ -21,4 +21,3 @@ def send_email(to: str, subject: str, body: str):
     except Exception as err:
         print("[ ERROR ] Erro ao enviar e-mail:", err)
 
-# Exemplo de uso:
