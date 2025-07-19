@@ -1,5 +1,6 @@
 # Entregas
 from src.utils.read_worksheet import read_worksheet
+from src.templates.emails_template import email_template
 
 def delivery_message() -> dict:
     data = read_worksheet()
@@ -17,7 +18,7 @@ def delivery_message() -> dict:
 
     message = {
         'subject':'RELATORIO DE ENTREGAS DA SEMANA',
-        'body': f'<h1>Segue o relatorio de entregas da semana</h1>{table_html}'
+        'body': email_template('Relatorio De Entregas Da Semana', table_html)
         
     }
     return message

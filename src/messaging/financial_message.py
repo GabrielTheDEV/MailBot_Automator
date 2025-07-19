@@ -1,4 +1,5 @@
 from src.utils.read_worksheet import read_worksheet
+from src.templates.emails_template import email_template
 
 def financial_message() -> dict:
     data = read_worksheet()
@@ -14,7 +15,7 @@ def financial_message() -> dict:
 
     message = {
         'subject':'RELATORIO FINANCEIRO DA SEMANA',
-        'body': f'<h1>Segue o relatorio financeiro da semana</h1>{table_html}'
+        'body': email_template('Segue o relatorio financeiro da semana', table_html)
         
     }
     return message

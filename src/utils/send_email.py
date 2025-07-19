@@ -22,7 +22,7 @@ def send_email(to: list, subject: str, body: str):
         with smtplib.SMTP_SSL(SERVER_SMTP, PORT) as server:
             server.login(EMAIL, PASS)
             server.send_message(msg)
-        print("[ DONE ] E-mail enviado com sucesso!")
+        print("[ SUCESSO ] E-mail enviado com sucesso!")
     except Exception as err:
         print("[ ERROR ] Erro ao enviar e-mail:", err)
 
