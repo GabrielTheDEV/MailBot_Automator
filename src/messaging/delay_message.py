@@ -14,7 +14,7 @@ def delay_message():
 
     table_html = delayed.to_html(index=False, border=1)
 
-    message : dict = {
+    message = {
         'subject':'RELATORIO FINANCEIRO DA SEMANA',
         'body': f'<h1>Segue o relatorio financeiro da semana</h1>{table_html}'
         

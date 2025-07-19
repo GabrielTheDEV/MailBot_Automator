@@ -15,7 +15,7 @@ def delivery_message() -> dict:
 
     table_html = delivered.to_html(index=False, border=1)
 
-    message : dict = {
+    message = {
         'subject':'RELATORIO DE ENTREGAS DA SEMANA',
         'body': f'<h1>Segue o relatorio de entregas da semana</h1>{table_html}'
         

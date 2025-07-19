@@ -4,10 +4,15 @@ from email.mime.multipart import MIMEMultipart
 
 from src.config.config import EMAIL, PASS, SERVER_SMTP, PORT
 
-def send_email(to: str, subject: str, body: str):
+def send_email(to: list, subject: str, body: str):
     msg = MIMEMultipart("alternative")
+
+    if isinstance(to , list ): # <-- converte lista de emails em strings
+        msg["To"] =", ".join(to)
+    else :
+        msg["To"] = to
+
     msg["From"] = EMAIL
-    msg["To"] = to
     msg["Subject"] = subject
 
     body_msg = MIMEText(body, "html")
