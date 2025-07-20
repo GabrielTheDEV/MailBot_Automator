@@ -2,7 +2,7 @@ from src.utils.send_email import send_email
 from src.messaging.delivery_message import delivery_message
 from src.messaging.delay_message import delay_message
 from src.messaging.financial_message import financial_message
-from src.utils.read_emails import read_emails
+# from src.utils.read_emails import read_emails
 
 delivery_report = delivery_message()
 financial_report = financial_message()
