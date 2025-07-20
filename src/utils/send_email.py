@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 
 from src.config.config import EMAIL, PASS, SERVER_SMTP, PORT
 
+
 def send_email(to: list, subject: str, body: str):
     msg = MIMEMultipart("alternative")
 

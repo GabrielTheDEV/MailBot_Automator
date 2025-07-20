@@ -6,6 +6,7 @@ __pycache__/
 
 
 data/planil.xlsx
+data/emails.txt
 *.log
 
 .vscode/
