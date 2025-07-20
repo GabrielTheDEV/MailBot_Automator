@@ -11,6 +11,12 @@ def delivery_message() -> dict:
         'Destino','Motorista','Veículo','Previsão Entrega',
         'Entrega Realizada','Status','Valor Frete'
     ]
+    orders = len(data)
+    delivered_orders:int = len(delivered)
+    in_transit_orders:int = len(data[data['Status'] == 'Em trânsito'])
+    canceled_orders:int = len(data[data['Status'] == 'Cancelado'])
+   
+
     if all(c in delivered.columns for c in columns):
         delivered = delivered[columns]
 
@@ -18,7 +24,15 @@ def delivery_message() -> dict:
 
     message = {
         'subject':'RELATORIO DE ENTREGAS DA SEMANA',
-        'body': email_template('Relatorio De Entregas Da Semana', table_html)
+        'body': email_template('Relatorio De Entregas Da Semana', table_html, f"""
+            <span>Resumo Entregas:</span>
+                <ul>
+                    <li>Total de pedidos da semana: {orders}</li>
+                    <li>Pedidos entregues: {delivered_orders}</li>
+                    <li>Pedidos em trânsito: {in_transit_orders}</li>
+                    <li>cancelados: {canceled_orders}</li>
+                </ul>            
+        """)
         
     }
     return message

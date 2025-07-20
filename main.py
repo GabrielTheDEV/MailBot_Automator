@@ -26,4 +26,3 @@ send_email(
         
 )
 
-read_emails()

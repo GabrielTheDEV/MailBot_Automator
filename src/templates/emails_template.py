@@ -1,6 +1,6 @@
 from src.templates.email_table_style import EMAIL_TABLE_STYLE
 
-def email_template(title: str, table_html: str) -> str:
+def email_template(title: str, table_html: str, resume) -> str:
     return f"""
         <html>
             <head>{EMAIL_TABLE_STYLE}</head>
@@ -17,8 +17,7 @@ def email_template(title: str, table_html: str) -> str:
                     {table_html}
                 </div>
                 <div>
-                    <span>Resumo :</span>
-                    
+                    {resume}
                 </div>
                 <div class="footer">
                     Este é um e-mail automático. Não responda esta mensagem.
