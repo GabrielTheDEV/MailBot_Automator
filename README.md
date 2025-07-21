@@ -20,5 +20,6 @@ MailBot Automator é um bot inteligente desenvolvido em Python que automatiza o 
   
 
 ## Como usar
-
+- **Em breve**
+---
 ## Documentação do projeto
